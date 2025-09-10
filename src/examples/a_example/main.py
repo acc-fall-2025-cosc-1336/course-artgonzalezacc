@@ -1,11 +1,9 @@
-from devprocess import echo_value
-# Example usage of echo_value function
-def main():
-    echoed_value = echo_value("Hello, world!")
-    print(echoed_value)  # Output: Hello, world!
+from devprocess import add_numbers
 
-    echoed_value = echo_value(42)
-    print(echoed_value)  # Output: 42
+def main():
+    result = add_numbers(5, 10)
+    print("The sum is:", result)
+    
 
 if __name__ == "__main__":
     main()
