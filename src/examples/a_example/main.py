@@ -1,11 +1,12 @@
 from devprocess import add_numbers
 
 def main():
-    result = add_numbers("5", "10")
+    num1 = input("Enter first number:  ")
+    num2 = input("Enter second number: ")
+
+    result = add_numbers(int(num1), int(num2))
     print("The sum is:", result)
-    result = 5 
-    print("The sum is:", result)
-    
+
 
 if __name__ == "__main__":
     main()
