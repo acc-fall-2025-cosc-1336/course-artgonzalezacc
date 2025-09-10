@@ -1,7 +1,9 @@
 from devprocess import add_numbers
 
 def main():
-    result = add_numbers(5, 10)
+    result = add_numbers("5", "10")
+    print("The sum is:", result)
+    result = 5 
     print("The sum is:", result)
     
 
