@@ -1,11 +1,11 @@
-from input_process_output import float_division
+from input_process_output import integer_division
 
 def main():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    result = float_division(num1, num2)
-    print(f"The result of dividing {num1} by {num2} is: {result}")
+    a = int(input("Enter first integer: "))#input convert to int(whole number)
+    b = int(input("Enter second integer: "))
 
+    print("Integer division:", integer_division(a, b))
+    
 
 if __name__ == "__main__":
     main()
