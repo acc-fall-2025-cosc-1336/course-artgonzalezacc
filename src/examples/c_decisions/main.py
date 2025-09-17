@@ -1,10 +1,11 @@
-from decisions import is_even, is_odd
+from decisions import is_vowel
 
 def main():
-    print(is_even(2))
-    print(is_even(3))
-    print(is_odd(2))
-    print(is_odd(3))
+    print(is_vowel('a'))
+    print(is_vowel('b'))
+    print(is_vowel('w'))
+    print(is_vowel('x'))
+    print(is_vowel('y'))
 
 if __name__ == "__main__":
     main()
