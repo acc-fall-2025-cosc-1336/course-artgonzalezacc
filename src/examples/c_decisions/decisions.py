@@ -12,5 +12,8 @@ def is_vowel(char):
 
 def compare_strings(str1, str2):
     return str1 == str2
+
+def is_number_in_range(num, start, end):
+    return num >= start and num <= end
         
 
