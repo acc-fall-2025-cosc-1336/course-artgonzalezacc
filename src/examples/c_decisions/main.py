@@ -1,11 +1,9 @@
-from decisions import is_vowel
+from decisions import get_generation
 
 def main():
-    print(is_vowel('a'))
-    print(is_vowel('b'))
-    print(is_vowel('w'))
-    print(is_vowel('x'))
-    print(is_vowel('y'))
+    year = int(input('Enter year: '))
+    result = get_generation(year)
+    print(f'Generation: {result}')
 
 if __name__ == "__main__":
     main()
