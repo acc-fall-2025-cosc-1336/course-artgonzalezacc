@@ -19,3 +19,23 @@ def is_number_in_range(num, start, end):
 def is_number_not_in_range(num, start, end):
     return num < start or num > end
 
+def get_generation(year):
+    generation = ""
+
+    if(year >= 1996 and year <= 2014):
+       generation = "Centennial" 
+    elif(year >= 1977 and year <= 1995):
+        generation = "Milennial"
+    elif(year >= 1965 and year <= 1976):
+        generation = "Generation X"
+    elif(year >= 1946 and year <= 1964):
+        generation = "Baby Boomer"
+    elif(year >= 1925 and year <= 1945):
+        generation = "Silent Generation"
+    else:
+        generation = "Invalid Year"
+
+    return generation
+    
+    
+

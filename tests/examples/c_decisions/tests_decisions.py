@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import test_config, is_even, compare_strings, is_number_in_range, is_number_not_in_range
+from src.examples.c_decisions.decisions import test_config, is_even, compare_strings, is_number_in_range, is_number_not_in_range, get_generation
 
 class Test_Config(unittest.TestCase):
 
@@ -59,5 +59,14 @@ class Test_Config(unittest.TestCase):
         self.assertTrue(is_number_not_in_range(-11, -10, 0))
         self.assertTrue(is_number_not_in_range(1, 2, 3))
 
+    def test_get_generation(self):
+        self.assertEqual(get_generation(2030), "Invalid Year")
+        self.assertEqual(get_generation(2010), "Centennial")
+        self.assertEqual(get_generation(1990), "Milennial")
+        self.assertEqual(get_generation(1970), "Generation X")
+        self.assertEqual(get_generation(1950), "Baby Boomer")
+        self.assertEqual(get_generation(1930), "Silent Generation")
+        self.assertEqual(get_generation(1900), "Invalid Year")
+        
 
 
