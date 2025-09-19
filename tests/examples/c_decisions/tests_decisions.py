@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import test_config, is_even, compare_strings, is_number_in_range
+from src.examples.c_decisions.decisions import test_config, is_even, compare_strings, is_number_in_range, is_number_not_in_range
 
 class Test_Config(unittest.TestCase):
 
@@ -48,6 +48,16 @@ class Test_Config(unittest.TestCase):
         self.assertTrue(is_number_in_range(-5, -10, 0))
         self.assertFalse(is_number_in_range(-11, -10, 0))
         self.assertFalse(is_number_in_range(1, 2, 3))
+
+    def test_is_number_not_in_range(self):
+        self.assertFalse(is_number_not_in_range(5, 1, 10))
+        self.assertFalse(is_number_not_in_range(1, 1, 10))
+        self.assertFalse(is_number_not_in_range(10, 1, 10))
+        self.assertTrue(is_number_not_in_range(0, 1, 10))
+        self.assertTrue(is_number_not_in_range(11, 1, 10))
+        self.assertFalse(is_number_not_in_range(-5, -10, 0))
+        self.assertTrue(is_number_not_in_range(-11, -10, 0))
+        self.assertTrue(is_number_not_in_range(1, 2, 3))
 
 
 

@@ -2,7 +2,7 @@ def test_config():
     return True
 
 def is_even(n):
-        return n % 2 == 0
+    return n % 2 == 0
 
 def is_odd(n):
     return n % 2 != 0
@@ -15,5 +15,7 @@ def compare_strings(str1, str2):
 
 def is_number_in_range(num, start, end):
     return num >= start and num <= end
-        
+
+def is_number_not_in_range(num, start, end):
+    return num < start or num > end
 
