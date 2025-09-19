@@ -7,7 +7,8 @@ def main():
 
     if(result):
         print(char, 'is vowel')
-   
+    else:
+        print(char, 'is not a vowel')
 
 if __name__ == "__main__":
     main()
