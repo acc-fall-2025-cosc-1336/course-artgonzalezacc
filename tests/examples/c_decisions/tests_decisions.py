@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import test_config, is_even
+from src.examples.c_decisions.decisions import test_config, is_even, compare_strings
 
 class Test_Config(unittest.TestCase):
 
@@ -32,4 +32,12 @@ class Test_Config(unittest.TestCase):
         self.assertFalse(is_vowel('b'))
         self.assertFalse(is_vowel('z'))
         self.assertFalse(is_vowel('w')) 
+
+    def test_compare_strings(self):
+        self.assertTrue(compare_strings('hello', 'hello'))
+        self.assertFalse(compare_strings('hello', 'world'))
+        self.assertTrue(compare_strings('', ''))
+        self.assertFalse(compare_strings('Python', 'python'))
+
+        
 

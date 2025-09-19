@@ -1,14 +1,15 @@
-from decisions import is_vowel
+from decisions import compare_strings
 
 def main():
-    char = input('Enter a letter: ')
+    str1 = input('Enter first string: ')
+    str2 = input('Enter second string: ')
 
-    result = is_vowel(char)
+    result = compare_strings(str1, str2)
 
     if(result):
-        print(char, 'is vowel')
+        print('The strings are equal')
     else:
-        print(char, 'is not a vowel')
+        print('The strings are not equal')
 
 if __name__ == "__main__":
     main()

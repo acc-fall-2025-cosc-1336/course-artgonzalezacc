@@ -10,3 +10,7 @@ def is_odd(n):
 def is_vowel(char):
     return char == 'a' or char== 'e' or char == 'i' or char == 'o' or char == 'u'
 
+def compare_strings(str1, str2):
+    return str1 == str2
+        
+
