@@ -28,3 +28,17 @@ def sum_to_n(n):
             print(counter, n, counter <= n, total)
 
     return total
+
+def sum_of_squares(n):
+    
+    total = 0
+
+    while n > 0:
+        total += n * n #total = total + n * n
+        print(n, n > 0, total)
+        n -= 1
+
+        if(n == 0):
+            print(n, n > 0, total)
+
+    return total
