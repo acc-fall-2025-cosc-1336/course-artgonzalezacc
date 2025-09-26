@@ -1,7 +1,7 @@
-from repetition import sum_to_n_for
+from repetition import sum_of_squares_for
 
 def main():
-    print("Sum to n using for:", sum_to_n_for(3))
+    print("Sum of squares using for:", sum_of_squares_for(3))
 
 if __name__ == "__main__":
     main()

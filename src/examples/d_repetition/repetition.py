@@ -59,3 +59,12 @@ def sum_to_n_for(n):
         print(counter, n, counter <= n, total)
 
     return total
+
+def sum_of_squares_for(n):
+    total = 0
+
+    for i in range(n, 0, -1):
+        total += i * i #total = total + i * i
+        print(i, i > 0, total)
+
+    return total
