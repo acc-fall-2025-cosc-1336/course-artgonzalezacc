@@ -68,3 +68,9 @@ def sum_of_squares_for(n):
         print(i, i > 0, total)
 
     return total
+
+def prompt_user():
+    choice = 'y'
+
+    while choice == 'y' or choice == 'Y':
+        choice = input("Do you want to continue (y, n): ")
