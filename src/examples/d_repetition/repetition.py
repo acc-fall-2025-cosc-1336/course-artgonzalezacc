@@ -42,3 +42,11 @@ def sum_of_squares(n):
             print(n, n > 0, total)
 
     return total
+
+def display_hello_for_range(value):
+    print('before loop')
+
+    for num in range(value):
+        print(num, value, "Hello")
+
+    print('after loop')
