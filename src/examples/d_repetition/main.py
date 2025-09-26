@@ -1,7 +1,7 @@
-import repetition
+from repetition import run_menu
 
 def main():
-    repetition.display_hello(3)
+    run_menu()
 
 if __name__ == "__main__":
     main()

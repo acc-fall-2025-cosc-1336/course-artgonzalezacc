@@ -21,11 +21,7 @@ def sum_to_n(n):
     
     while counter <= n:
         total += counter #total = total + counter
-        print(counter, n, counter <= n, total)
         counter += 1
-
-        if(counter > n):
-            print(counter, n, counter <= n, total)
 
     return total
 
@@ -35,10 +31,67 @@ def sum_of_squares(n):
 
     while n > 0:
         total += n * n #total = total + n * n
-        print(n, n > 0, total)
         n -= 1
 
-        if(n == 0):
-            print(n, n > 0, total)
+    return total
+
+def display_hello_for_range(value):
+    print('before loop')
+
+    for num in range(0, value, 2):
+        print(num, value, "Hello")
+
+    print('after loop')
+
+def sum_to_n_for(n):
+    total = 0
+
+    for counter in range(0, n + 1): # end range is n - 1
+        total += counter #total = total + counter
+        print(counter, n, counter <= n, total)
 
     return total
+
+def sum_of_squares_for(n):
+    total = 0
+
+    for i in range(n, 0, -1):
+        total += i * i #total = total + i * i
+        print(i, i > 0, total)
+
+    return total
+
+def prompt_user():
+    choice = 'y'
+
+    while choice == 'y' or choice == 'Y':
+        choice = input("Do you want to continue (y, n): ")
+
+def display_menu():
+    print("1. Sum to n")
+    print("2. Sum of squares")
+    print("3. Exit")
+
+def run_menu():
+    choice = ''
+    
+    while choice != '3':
+        display_menu()
+        choice = input("Enter your choice: ")
+        print('')
+        handle_choice(choice)
+        print('')
+
+def handle_choice(choice):
+    if choice == '1':
+        n = int(input("Enter a number to sum to: "))
+        result = sum_to_n(n)
+        print(f"Sum to {n} is {result}")
+    elif choice == '2':
+        n = int(input("Enter a number to sum squares to: "))
+        result = sum_of_squares(n)
+        print(f"Sum of squares to {n} is {result}")
+    elif choice == '3':
+        print("Exiting the program.")
+    else:
+        print("Invalid choice. Please try again.")
