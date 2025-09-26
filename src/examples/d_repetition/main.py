@@ -1,7 +1,7 @@
-from repetition import prompt_user
+from repetition import run_menu
 
 def main():
-    prompt_user()
+    run_menu()
 
 if __name__ == "__main__":
     main()
