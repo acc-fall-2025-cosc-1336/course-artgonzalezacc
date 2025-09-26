@@ -1,7 +1,7 @@
-from repetition import display_hello_for_range
+from repetition import sum_to_n_for
 
 def main():
-    display_hello_for_range(20)
+    print("Sum to n using for:", sum_to_n_for(3))
 
 if __name__ == "__main__":
     main()

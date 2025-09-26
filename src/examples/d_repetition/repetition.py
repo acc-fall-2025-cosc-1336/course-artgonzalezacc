@@ -50,3 +50,12 @@ def display_hello_for_range(value):
         print(num, value, "Hello")
 
     print('after loop')
+
+def sum_to_n_for(n):
+    total = 0
+
+    for counter in range(0, n + 1): # end range is n - 1
+        total += counter #total = total + counter
+        print(counter, n, counter <= n, total)
+
+    return total
