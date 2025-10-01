@@ -137,3 +137,11 @@ def for_loop_break(n, break_point):
             print(f"Breaking out of the loop at i={i}")
             break
 
+def while_loop_continue(n, continue_point):
+    i = 0
+    while i < n:
+        i += 1
+        if i == continue_point:
+            print(f"Continuing to next iteration at i={i}")
+            continue
+        print(i, n)
