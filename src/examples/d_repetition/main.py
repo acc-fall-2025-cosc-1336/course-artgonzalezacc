@@ -1,12 +1,12 @@
-from repetition import nested_while_loop
+from repetition import multiplication_table
 
 def main():
     num = 0
 
-    while num < 1 or num > 5:
-        num = int(input("Enter a number for nested loops(1 to 5): "))
+    while num < 3 or num > 10:
+        num = int(input("Enter a number for the multiplication table(3 to 10): "))
 
-    nested_while_loop(num)
+    multiplication_table(num)
 
 if __name__ == "__main__":
     main()

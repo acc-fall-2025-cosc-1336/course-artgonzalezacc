@@ -105,3 +105,15 @@ def nested_while_loop(n):
             print(i, j, '\tinner loop')
             j += 1
         i += 1
+
+def multiplication_table(n):
+    i = 0
+    
+    while i < n:
+        j = 0
+        while j < n:
+            print(f"{(i+1) * (j+1):4}", end=' ')
+            j += 1
+        
+        print()  # New line after each row
+        i += 1
