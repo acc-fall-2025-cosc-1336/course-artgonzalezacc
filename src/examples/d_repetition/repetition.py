@@ -123,3 +123,9 @@ def nested_for_loop (n):
         print(i, 'waiting on inner loop to finish')
         for j in range(n):
             print(i, j, '\tinner loop')
+
+def multiplication_table_for(n):
+    for i in range(n):
+        for j in range(n):
+            print(f"{(i+1) * (j+1):4}", end=' ')
+        print()  # New line after each row
