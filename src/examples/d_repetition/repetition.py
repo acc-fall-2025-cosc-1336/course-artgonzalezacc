@@ -95,3 +95,13 @@ def handle_choice(choice):
         print("Exiting the program.")
     else:
         print("Invalid choice. Please try again.")
+
+def nested_while_loop(n):
+    i = 0
+    while i < n:
+        print(i, 'waiting on inner loop to finish')
+        j = 0
+        while j < n:
+            print(i, j, '\tinner loop')
+            j += 1
+        i += 1
