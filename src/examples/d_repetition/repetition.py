@@ -95,3 +95,53 @@ def handle_choice(choice):
         print("Exiting the program.")
     else:
         print("Invalid choice. Please try again.")
+
+def nested_while_loop(n):
+    i = 0
+    while i < n:
+        print(i, 'waiting on inner loop to finish')
+        j = 0
+        while j < n:
+            print(i, j, '\tinner loop')
+            j += 1
+        i += 1
+
+def multiplication_table(n):
+    i = 0
+    
+    while i < n:
+        j = 0
+        while j < n:
+            print(f"{(i+1) * (j+1):4}", end=' ')
+            j += 1
+        
+        print()  # New line after each row
+        i += 1
+
+def nested_for_loop (n):
+    for i in range(n):
+        print(i, 'waiting on inner loop to finish')
+        for j in range(n):
+            print(i, j, '\tinner loop')
+
+def multiplication_table_for(n):
+    for i in range(n):
+        for j in range(n):
+            print(f"{(i+1) * (j+1):4}", end=' ')
+        print()  # New line after each row
+
+def for_loop_break(n, break_point):
+    for i in range(n):
+        print(i, n)
+        if i == break_point:
+            print(f"Breaking out of the loop at i={i}")
+            break
+
+def while_loop_continue(n, continue_point):
+    i = 0
+    while i < n:
+        i += 1
+        if i == continue_point:
+            print(f"Continuing to next iteration at i={i}")
+            continue
+        print(i, n)
