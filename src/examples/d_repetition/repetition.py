@@ -117,3 +117,9 @@ def multiplication_table(n):
         
         print()  # New line after each row
         i += 1
+
+def nested_for_loop (n):
+    for i in range(n):
+        print(i, 'waiting on inner loop to finish')
+        for j in range(n):
+            print(i, j, '\tinner loop')
