@@ -129,3 +129,11 @@ def multiplication_table_for(n):
         for j in range(n):
             print(f"{(i+1) * (j+1):4}", end=' ')
         print()  # New line after each row
+
+def for_loop_break(n, break_point):
+    for i in range(n):
+        print(i, n)
+        if i == break_point:
+            print(f"Breaking out of the loop at i={i}")
+            break
+
