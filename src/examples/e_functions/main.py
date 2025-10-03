@@ -1,8 +1,10 @@
 #main program
-from value_return_functions import return_hello
+from void_functions import display_num
 
 def main():
-    greeting = return_hello()
-    print(greeting)
+    num = 10
+    print(id(num))
+    display_num(num)
+    print(num)
 
 main()
