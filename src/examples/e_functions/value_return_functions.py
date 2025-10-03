@@ -3,3 +3,6 @@ def test_config():
 
 def return_hello():
     return 'hello'
+
+def say_hello(name='C++'):
+    print('hello ' + name)
