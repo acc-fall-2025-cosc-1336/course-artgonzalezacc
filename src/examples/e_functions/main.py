@@ -1,7 +1,8 @@
 #main program
-from void_functions import say_hello
+from value_return_functions import return_hello
 
 def main():
-    say_hello()
+    greeting = return_hello()
+    print(greeting)
 
 main()
