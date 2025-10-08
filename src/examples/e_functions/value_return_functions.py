@@ -1,5 +1,8 @@
 from random import randint
 
+HEADS = 1
+TAILS = 2
+
 def test_config():
     return True
 
@@ -19,3 +22,6 @@ def generate_random_number_with_seed(start_range, end_range, seed):
 
 def get_dice_roll():
     return randint(1, 6)
+
+def get_head_or_tail():
+    return randint(HEADS, TAILS)

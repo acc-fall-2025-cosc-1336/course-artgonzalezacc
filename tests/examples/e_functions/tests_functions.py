@@ -40,4 +40,9 @@ class Test_Config(unittest.TestCase):
             self.assertGreaterEqual(roll, 1)
             self.assertLessEqual(roll, 6)
 
-    
+    def test_get_head_or_tail(self):
+        from src.examples.e_functions.value_return_functions import get_head_or_tail, HEADS, TAILS
+        for _ in range(20):
+            result = get_head_or_tail()
+            print(result)
+            self.assertIn(result, (HEADS, TAILS))
