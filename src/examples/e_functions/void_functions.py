@@ -17,3 +17,13 @@ def change_global_variable_value():
     
     print(state_sales_tax_rate)
 
+def variable_in_if_block():
+    if(True):
+        num = 20
+        print(num)
+
+    print(num)
+
+    
+
+

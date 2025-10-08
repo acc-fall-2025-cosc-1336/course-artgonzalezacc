@@ -1,7 +1,7 @@
 #main program
-from value_return_functions import say_hello
+from void_functions import variable_in_if_block
 
 def main():
-    say_hello('Python')
+    variable_in_if_block()
 
 main()
