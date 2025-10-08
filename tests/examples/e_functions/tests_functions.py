@@ -32,4 +32,12 @@ class Test_Config(unittest.TestCase):
 
             self.assertEqual(num1, num2)
 
+    def test_get_die_roll(self):
+        from src.examples.e_functions.value_return_functions import get_dice_roll
+        for _ in range(20):
+            roll = get_dice_roll()
+            print(roll)
+            self.assertGreaterEqual(roll, 1)
+            self.assertLessEqual(roll, 6)
+
     

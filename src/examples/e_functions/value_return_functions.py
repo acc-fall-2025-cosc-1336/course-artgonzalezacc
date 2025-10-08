@@ -16,3 +16,6 @@ def generate_random_number_with_seed(start_range, end_range, seed):
     from random import seed as set_seed
     set_seed(seed)
     return randint(start_range, end_range)
+
+def get_dice_roll():
+    return randint(1, 6)
