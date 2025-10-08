@@ -32,3 +32,11 @@ def variable_in_while_block():
         cnt -= 1
 
     print(num)
+
+def variable_in_for_range_block():
+
+    for i in range(0, 4):
+        num = 10
+
+    print(num)
+
