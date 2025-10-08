@@ -24,6 +24,11 @@ def variable_in_if_block():
 
     print(num)
 
-    
+def variable_in_while_block():
+    cnt = 3
 
+    while(cnt > 0):
+        num = 20
+        cnt -= 1
 
+    print(num)
