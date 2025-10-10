@@ -24,3 +24,6 @@ def get_x_char_cnt_of_string(str, x_char):
             cnt += 1
     
     return cnt
+
+def string_concatenation(str1, str2):
+    return str1 + str2 #a new string is created in memory

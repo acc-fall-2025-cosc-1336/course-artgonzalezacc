@@ -1,9 +1,11 @@
 #main program
+from strings import string_concatenation
 
 def main():
-    name = "Can"
-    #print(name[3])#generates an error
-    print(name[-2])#print the second to last character
+    str0 = "C++"
+    str1 = "Java"
+    str2 = string_concatenation(str0, str1)
+    print(str2)
    
 if __name__ == "__main__":
     main()
