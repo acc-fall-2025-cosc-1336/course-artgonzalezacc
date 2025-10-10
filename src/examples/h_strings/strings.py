@@ -11,3 +11,7 @@ def loop_string_w_while(str):
 def loop_string_w_for_range(str):
     for i in range(len(str)):
         print(i, "i in range ", len(str),  str[i])
+
+def loop_string_w_for(str):
+    for char in str:#magic loop
+        print(char)
