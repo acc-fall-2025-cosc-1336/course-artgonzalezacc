@@ -1,11 +1,7 @@
 #main program
 def main():
     name = "C++"
-    num = 42
-    print(name[0])
-    print(name[1])
-    print(name[2])
-
+    name[0] = 'c'  # This will raise an error because strings are immutable
 
 if __name__ == "__main__":
     main()
