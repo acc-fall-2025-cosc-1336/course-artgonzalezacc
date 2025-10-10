@@ -15,3 +15,12 @@ def loop_string_w_for_range(str):
 def loop_string_w_for(str):
     for char in str:#magic loop
         print(char)
+
+def get_x_char_cnt_of_string(str, x_char):
+    cnt = 0
+
+    for char in str:
+        if char == x_char:
+            cnt += 1
+    
+    return cnt
