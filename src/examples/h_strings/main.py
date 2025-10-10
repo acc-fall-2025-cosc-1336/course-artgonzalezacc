@@ -1,11 +1,9 @@
 #main program
+from strings import loop_string_w_while
+
 def main():
     name = "C++"
-    print(name[0])
-    print(name[1])
-    print(name[2])
-
-    print(len(name))
+    loop_string_w_while(name)
 
 if __name__ == "__main__":
     main()
