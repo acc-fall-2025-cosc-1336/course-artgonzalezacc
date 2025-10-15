@@ -35,3 +35,21 @@ class Test_Config(unittest.TestCase):
         self.assertTrue(is_substring_not_in_string("C++ is C++ and not Java", "JavaScript"))
         self.assertFalse(is_substring_not_in_string("Python3.8", "3.8"))
         self.assertTrue(is_substring_not_in_string("Python3.8", "3.9"))
+
+    def test_string_is_digit(self):
+        self.assertTrue("12345".isdigit())
+        self.assertFalse("123a45".isdigit())
+        self.assertFalse("12 345".isdigit())
+        self.assertFalse("".isdigit()) #empty string
+
+    def test_string_is_alpha(self):
+        self.assertTrue("HelloWorld".isalpha())
+        self.assertFalse("Hello World".isalpha()) #space is not alpha
+        self.assertFalse("Hello123".isalpha()) #numbers are not alpha
+        self.assertFalse("".isalpha()) #empty string
+
+    def test_string_is_lower_case(self):
+        self.assertTrue("helloworld".islower())
+        self.assertFalse("HelloWorld".islower())
+        self.assertTrue("helloworld123".islower()) #numbers are not lower case
+        self.assertFalse("".islower()) #empty string

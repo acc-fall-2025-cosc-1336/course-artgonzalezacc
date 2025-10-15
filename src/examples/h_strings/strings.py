@@ -33,3 +33,4 @@ def is_substring_in_string(str, substr):
 
 def is_substring_not_in_string(str, substr):
     return substr not in str
+
