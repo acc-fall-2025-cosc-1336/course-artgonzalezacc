@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.h_strings.strings import test_config, get_x_char_cnt_of_string, string_concatenation
+from src.examples.h_strings.strings import test_config, get_x_char_cnt_of_string, string_concatenation, is_substring_in_string
 
 class Test_Config(unittest.TestCase):
 
@@ -18,4 +18,12 @@ class Test_Config(unittest.TestCase):
         self.assertEqual("12345", string_concatenation("12", "345"))
         self.assertEqual("!@#$%", string_concatenation("!@#", "$%"))
         self.assertEqual("Python3.8", string_concatenation("Python", "3.8"))
+
+    def test_is_substring_in_string(self):
+        self.assertTrue(is_substring_in_string("Hello World", "World"))
+        self.assertFalse(is_substring_in_string("Hello World", "world")) #case sensitive
+        self.assertTrue(is_substring_in_string("C++ is C++ and not Java", "C++"))
+        self.assertFalse(is_substring_in_string("C++ is C++ and not Java", "JavaScript"))
+        self.assertTrue(is_substring_in_string("Python3.8", "3.8"))
+        self.assertFalse(is_substring_in_string("Python3.8", "3.9"))
 
