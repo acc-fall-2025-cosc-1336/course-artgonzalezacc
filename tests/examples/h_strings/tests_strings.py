@@ -95,3 +95,19 @@ class Test_Config(unittest.TestCase):
         self.assertFalse(is_file_allowed("script.py"))
         self.assertFalse(is_file_allowed("image.JPG")) #case sensitive
         self.assertFalse(is_file_allowed("image")) #no extension
+
+    def test_string_repeating_operator(self):
+        self.assertEqual("HelloHelloHello", "Hello" * 3)
+        self.assertEqual("123123", "123" * 2)
+        self.assertEqual("!@#!@#!@#!@#", "!@#" * 4)
+        self.assertEqual("", "Hello" * 0) #repeated 0 times
+        self.assertEqual("", "" * 5) #empty string repeated any number of times is still empty
+
+    def test_string_replace(self):
+        str = "Hello World"
+        self.assertEqual("Hello Universe", str.replace("World", "Universe"))
+        self.assertEqual("Hello World", str.replace("world", "Universe")) #case sensitive
+        self.assertEqual("C++ is C++ and not Python", "C++ is C++ and not Java".replace("Java", "Python"))
+        self.assertEqual("C++ is C++ and not Java", "C++ is C++ and not Java".replace("java", "Python")) #case sensitive
+        self.assertEqual("aaaaaa", "ababab".replace("b", "a"))
+        self.assertEqual("ababab", "ababab".replace("c", "a")) #substring not found, original string returned
