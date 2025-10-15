@@ -1,7 +1,7 @@
 import unittest
 
 from src.examples.h_strings.strings import test_config, get_x_char_cnt_of_string, string_concatenation, is_substring_in_string, \
-    is_substring_not_in_string
+    is_substring_not_in_string, is_file_allowed
 
 class Test_Config(unittest.TestCase):
 
@@ -84,3 +84,14 @@ class Test_Config(unittest.TestCase):
 
         str = ""
         self.assertEqual("", str.strip()) #empty string
+
+    def test_is_file_allowed(self):
+        self.assertTrue(is_file_allowed("image.jpg"))
+        self.assertTrue(is_file_allowed("photo.jpeg"))
+        self.assertTrue(is_file_allowed("graphic.png"))
+        self.assertTrue(is_file_allowed("animation.gif"))
+        self.assertFalse(is_file_allowed("document.pdf"))
+        self.assertFalse(is_file_allowed("archive.zip"))
+        self.assertFalse(is_file_allowed("script.py"))
+        self.assertFalse(is_file_allowed("image.JPG")) #case sensitive
+        self.assertFalse(is_file_allowed("image")) #no extension

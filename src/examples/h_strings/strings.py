@@ -34,3 +34,13 @@ def is_substring_in_string(str, substr):
 def is_substring_not_in_string(str, substr):
     return substr not in str
 
+def is_file_allowed(file_name):
+    
+    if(file_name.endswith(".jpg") or 
+       file_name.endswith(".jpeg") or 
+       file_name.endswith(".png") or 
+       file_name.endswith(".gif")):
+        return True
+    else:
+        return False
+    
