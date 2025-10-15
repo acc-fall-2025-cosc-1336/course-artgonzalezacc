@@ -53,3 +53,34 @@ class Test_Config(unittest.TestCase):
         self.assertFalse("HelloWorld".islower())
         self.assertTrue("helloworld123".islower()) #numbers are not lower case
         self.assertFalse("".islower()) #empty string
+
+    def test_convert_string_to_upper_case(self):
+        str = "helloworld"
+
+        self.assertEqual("HELLOWORLD", str.upper())
+        self.assertEqual(str, "helloworld") #the original string is not affected
+
+        str = "Hello World"
+        
+        self.assertEqual("HELLO WORLD", str.upper())
+        self.assertEqual("12345", "12345".upper()) #numbers are not affected
+        self.assertEqual("", "".upper()) #empty string
+
+    def test_strip_string(self):
+        str = "   Hello World   "
+        self.assertEqual("Hello World", str.strip())
+
+        str = "!!!Hello World!!!"
+        self.assertEqual("Hello World", str.strip("!"))
+
+        str = "   !!!Hello World!!!   "
+        self.assertEqual("Hello World", str.strip(" !"))
+
+        str = "Hello World"
+        self.assertEqual("Hello World", str.strip()) #no leading or trailing spaces
+
+        str = "     "
+        self.assertEqual("", str.strip()) #only spaces
+
+        str = ""
+        self.assertEqual("", str.strip()) #empty string

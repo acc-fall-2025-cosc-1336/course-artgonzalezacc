@@ -2,12 +2,18 @@
 from strings import is_substring_in_string
 
 def main():
-    in_str = is_substring_in_string("Four score and seven years ago", "Seven")
+    choice = 'y'
 
-    if(in_str):
-        print("The substring was found in the string")
-    else:
-        print("The substring was NOT found in the string")
+    while choice.lower() == 'y':
+        str = input("Enter a string: ")
+        substr = input("Enter a substring to search: ")
+
+        if is_substring_in_string(str, substr):
+            print(f'"{substr}" is found in "{str}"')
+        else:
+            print(f'"{substr}" is NOT found in "{str}"')
+
+        choice = input("Do you want to continue? (y/n): ")
 
    
 if __name__ == "__main__":
