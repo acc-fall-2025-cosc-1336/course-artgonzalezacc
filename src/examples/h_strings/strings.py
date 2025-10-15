@@ -30,3 +30,6 @@ def string_concatenation(str1, str2):
 
 def is_substring_in_string(str, substr):
     return substr in str
+
+def is_substring_not_in_string(str, substr):
+    return substr not in str
