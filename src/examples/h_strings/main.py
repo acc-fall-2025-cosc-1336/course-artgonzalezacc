@@ -1,11 +1,14 @@
 #main program
-from strings import string_concatenation
+from strings import is_substring_in_string
 
 def main():
-    str0 = "C++"
-    str1 = "Java"
-    str2 = string_concatenation(str0, str1)
-    print(str2)
+    in_str = is_substring_in_string("Four score and seven years ago", "Seven")
+
+    if(in_str):
+        print("The substring was found in the string")
+    else:
+        print("The substring was NOT found in the string")
+
    
 if __name__ == "__main__":
     main()
