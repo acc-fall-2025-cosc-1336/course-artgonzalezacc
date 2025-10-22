@@ -1,9 +1,9 @@
 #main program
-from lists import loop_list_w_for
+from lists import loop_update_element
 
 def main():
 
-    loop_list_w_for()
+    loop_update_element()
 
 if __name__ == "__main__":
     main()

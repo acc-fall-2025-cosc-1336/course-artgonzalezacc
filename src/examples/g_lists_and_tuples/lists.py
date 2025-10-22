@@ -27,3 +27,13 @@ def loop_list_w_for():
 
     for num in nums:
         print(num)
+
+def loop_update_element():
+    nums = [1, 2, 3, 4, 5]
+
+    print(nums)
+
+    nums[2] = 0
+
+    print(nums[2])#display updated element at index 2
+    print(nums)
