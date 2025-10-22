@@ -20,3 +20,10 @@ def loop_list_w_for_range():
 
     for index in range(len(nums)):
         print(index, len(nums), nums[index])
+
+def loop_list_w_for():
+
+    nums = [2, 4, 6, 8, 10]
+
+    for num in nums:
+        print(num)
