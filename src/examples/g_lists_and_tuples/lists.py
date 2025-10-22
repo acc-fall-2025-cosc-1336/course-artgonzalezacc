@@ -12,7 +12,7 @@ def loop_list_w_while():
     index = 0
     
     while index < len(nums):
-        print(nums[index])
+        print(index, index < len(nums), len(nums), nums[index])
         index += 1
 
 def loop_list_w_for_range():

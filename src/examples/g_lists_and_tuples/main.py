@@ -1,9 +1,9 @@
 #main program
-from lists import loop_list_w_for_range
+from lists import loop_list_w_while
 
 def main():
 
-    loop_list_w_for_range()
+    loop_list_w_while()
 
 if __name__ == "__main__":
     main()
