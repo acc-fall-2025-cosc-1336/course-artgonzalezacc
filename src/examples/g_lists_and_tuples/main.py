@@ -1,9 +1,9 @@
 #main program
-from lists import list_holds_mixed_data_types
+from arrays import create_numeric_array
 
 def main():
 
-    list_holds_mixed_data_types()
+    create_numeric_array()
 
 if __name__ == "__main__":
     main()
