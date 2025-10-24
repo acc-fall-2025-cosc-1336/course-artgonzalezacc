@@ -1,8 +1,8 @@
 #main program
-from arrays import modify_array_element
+from lists import concatenate_lists
 
 def main():
-    modify_array_element()
+    concatenate_lists()
 
 if __name__ == "__main__":
     main()
