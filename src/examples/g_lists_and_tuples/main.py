@@ -1,9 +1,9 @@
 #main program
-from arrays import create_numeric_array
+from arrays import loop_array_w_while
 
 def main():
 
-    create_numeric_array()
+    loop_array_w_while()
 
 if __name__ == "__main__":
     main()
