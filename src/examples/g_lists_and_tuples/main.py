@@ -1,9 +1,9 @@
 #main program
-from lists import loop_update_element
+from lists import list_holds_mixed_data_types
 
 def main():
 
-    loop_update_element()
+    list_holds_mixed_data_types()
 
 if __name__ == "__main__":
     main()
