@@ -17,3 +17,20 @@ class Test_Config(unittest.TestCase):
         
         self.assertEqual(combined_list, [1, 2, 3, 4, 5, 6])
 
+    def test_list_shallow_copy(self):
+        original_list = [10, 20, 30]
+        copied_list = original_list
+        
+        original_list[0] = 99  # modify original_list to see if it affects "copied_list"
+        
+        self.assertNotEqual(copied_list, [10, 20, 30]) # since copied_list references the same list as original_list
+
+    def test_list_deep_copy(self):
+        original_list = [10, 20, 30]
+        deep_copied_list = [] + original_list  # create a new list with the same elements
+        
+        original_list[0] = 99  # modify original_list to see if it affects deep_copied_list
+        
+        self.assertEqual(deep_copied_list, [10, 20, 30]) # deep_copied_list should remain unchanged
+
+
