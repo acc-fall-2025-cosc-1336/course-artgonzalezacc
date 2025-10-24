@@ -21,3 +21,12 @@ def loop_array_w_for_range():
 def create_char_array():
     chars = array('u', ['a', 'b', 'c', 'd']) # 'u' indicates an array of Unicode characters
     print(chars[2])
+
+def modify_array_element():
+    nums = array('i', [5, 10, 15, 20, 25])
+    print("Before modification:", nums)
+
+    nums[3] = 99
+
+    print("After modification:", nums)
+    print("Modified element at index 3:", nums[3])

@@ -1,8 +1,8 @@
 #main program
-from arrays import create_char_array
+from arrays import modify_array_element
 
 def main():
-    create_char_array()
+    modify_array_element()
 
 if __name__ == "__main__":
     main()
