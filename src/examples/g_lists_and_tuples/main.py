@@ -1,9 +1,8 @@
 #main program
-from lists import loop_update_element
+from lists import concatenate_lists
 
 def main():
-
-    loop_update_element()
+    concatenate_lists()
 
 if __name__ == "__main__":
     main()

@@ -37,3 +37,18 @@ def loop_update_element():
 
     print(nums[2])#display updated element at index 2
     print(nums)
+
+def list_holds_mixed_data_types():
+    generic_list = [1, "two", 3.0, True]
+    for item in generic_list:
+        print(item)
+
+def concatenate_lists():
+    list_one = [1, 2, 3]
+    list_two = [4, 5, 6]
+
+    combined_list = list_one + list_two
+
+    print(combined_list)
+
+    
