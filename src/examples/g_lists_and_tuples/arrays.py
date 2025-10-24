@@ -12,5 +12,8 @@ def loop_array_w_while():
         print(index, nums[index])
         index += 1
 
-    
-    
+def loop_array_w_for_range():
+    nums = array('f', [10.3, 20.5, 30.1, 40.2, 50.7]) # 'f' indicates an array of floats
+
+    for index in range(len(nums)):
+        print(index, nums[index])
