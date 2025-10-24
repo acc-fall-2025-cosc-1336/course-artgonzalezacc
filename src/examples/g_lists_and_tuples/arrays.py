@@ -17,3 +17,7 @@ def loop_array_w_for_range():
 
     for index in range(len(nums)):
         print(index, nums[index])
+
+def create_char_array():
+    chars = array('u', ['a', 'b', 'c', 'd']) # 'u' indicates an array of Unicode characters
+    print(chars[2])

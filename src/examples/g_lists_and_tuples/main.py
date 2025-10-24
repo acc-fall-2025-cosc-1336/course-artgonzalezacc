@@ -1,9 +1,8 @@
 #main program
-from arrays import loop_array_w_for_range
+from arrays import create_char_array
 
 def main():
-
-    loop_array_w_for_range()
+    create_char_array()
 
 if __name__ == "__main__":
     main()
