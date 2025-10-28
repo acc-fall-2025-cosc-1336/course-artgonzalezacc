@@ -27,3 +27,21 @@ def get_x_char_cnt_of_string(str, x_char):
 
 def string_concatenation(str1, str2):
     return str1 + str2 #a new string is created in memory
+
+def is_substring_in_string(str, substr):
+    return substr in str
+
+def is_substring_not_in_string(str, substr):
+    return substr not in str
+
+def is_file_allowed(file_name):
+    
+    if(file_name.endswith(".jpg") or 
+       file_name.endswith(".jpeg") or 
+       file_name.endswith(".png") or 
+       file_name.endswith(".gif")):
+        return True
+    else:
+        return False
+
+    
