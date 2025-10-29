@@ -60,3 +60,13 @@ class Test_Config(unittest.TestCase):
 
         self.assertFalse(not_in_list)
 
+    def test_append_to_list(self):
+        nums = [1, 2, 3]
+        nums.append(4)
+        self.assertEqual(nums, [1, 2, 3, 4])
+
+    def test_insert_into_list(self):
+        nums = [1, 2, 4]
+        nums.insert(2, 3)  # insert 3 at index 2
+        self.assertEqual(nums, [1, 2, 3, 4])
+
