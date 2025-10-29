@@ -1,6 +1,7 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while, average_list_values_w_for_range, \
+    list_sum_of_squares_w_for, return_list
 
 class Test_Config(unittest.TestCase):
 
@@ -32,5 +33,72 @@ class Test_Config(unittest.TestCase):
         original_list[0] = 99  # modify original_list to see if it affects deep_copied_list
         
         self.assertEqual(deep_copied_list, [10, 20, 30]) # deep_copied_list should remain unchanged
+
+    def test_list_as_parameter(self):
+        my_list = [1, 2, 3]
+        expected_list = [10, 2, 3]
+        list_as_parameter(my_list)
+        self.assertEqual(my_list[0], expected_list[0])  # the first element should be updated to 10
+        self.assertEqual(my_list, expected_list)  # the entire list should match the expected list
+
+    def test_search_in_list(self):
+        nums = [5, 10, 15, 20, 25]
+        target = 15
+        found = False
+
+        if target in nums:
+            found = True
+
+        self.assertTrue(found)
+
+    def test_search_not_in_list(self):
+        nums = [5, 10, 15, 20, 25]
+        target = 30
+        not_in_list = True
+
+        if target not in nums:
+            not_in_list = False
+
+        self.assertFalse(not_in_list)
+
+    def test_append_to_list(self):
+        nums = [1, 2, 3]
+        nums.append(4)
+        self.assertEqual(nums, [1, 2, 3, 4])
+
+    def test_insert_into_list(self):
+        nums = [1, 2, 4]
+        nums.insert(2, 3)  # insert 3 at index 2
+        self.assertEqual(nums, [1, 2, 3, 4])
+
+    def test_total_list_values_w_while(self):
+        
+        nums = [1, 2, 3, 4, 5]
+        total = total_list_values_w_while(nums)
+        self.assertEqual(total, 15)
+
+    def test_average_list_values_w_for_range(self):
+        nums = [2, 4, 6, 8, 10]
+        average = average_list_values_w_for_range(nums)
+        self.assertEqual(average, 6.0)
+
+    def test_list_sum_of_squares_w_for(self):
+        nums = [2, 4, 6 ]
+        sum_of_squares = list_sum_of_squares_w_for(nums)
+        self.assertEqual(sum_of_squares, 56)  # 2^2 + 4^2 + 6^2 = 56
+    
+    def test_return_list(self):
+        nums = [1, 2, 3, 4, 5]
+        returned_list = return_list()
+        self.assertEqual(returned_list, nums)
+
+    def test_return_list_is_new_instance(self):
+        returned_list = return_list()
+        another_list = return_list()
+        self.assertIsNot(returned_list, another_list)  # Ensure they are different instances
+
+        returned_list[0] = 100
+        self.assertNotEqual(returned_list, another_list)  # Ensure modifying one does not affect the other
+    
 
 

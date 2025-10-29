@@ -51,4 +51,37 @@ def concatenate_lists():
 
     print(combined_list)
 
+def list_as_parameter(my_list):
+    my_list[0] = 10
+    print(my_list)
+
+def total_list_values_w_while(my_list):
+    total = 0
+    i = 0
+
+    while i < len(my_list):
+        total += my_list[i]
+        i += 1
     
+    return total
+
+def average_list_values_w_for_range(my_list):
+    total = 0
+
+    for i in range(len(my_list)):
+        total += my_list[i]
+    
+    average = total / len(my_list)
+    
+    return average
+
+def list_sum_of_squares_w_for(my_list):
+    sum_of_squares = 0
+
+    for num in my_list:
+        sum_of_squares += num ** 2
+
+    return sum_of_squares
+
+def return_list():
+    return [1, 2, 3, 4, 5]
