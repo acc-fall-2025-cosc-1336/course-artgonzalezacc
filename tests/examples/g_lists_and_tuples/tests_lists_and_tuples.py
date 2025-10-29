@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter
 
 class Test_Config(unittest.TestCase):
 
@@ -33,4 +33,10 @@ class Test_Config(unittest.TestCase):
         
         self.assertEqual(deep_copied_list, [10, 20, 30]) # deep_copied_list should remain unchanged
 
+    def test_list_as_parameter(self):
+        my_list = [1, 2, 3]
+        expected_list = [10, 2, 3]
+        list_as_parameter(my_list)
+        self.assertEqual(my_list[0], expected_list[0])  # the first element should be updated to 10
+        self.assertEqual(my_list, expected_list)  # the entire list should match the expected list
 

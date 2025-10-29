@@ -51,4 +51,6 @@ def concatenate_lists():
 
     print(combined_list)
 
-    
+def list_as_parameter(my_list):
+    my_list[0] = 10
+    print(my_list)
