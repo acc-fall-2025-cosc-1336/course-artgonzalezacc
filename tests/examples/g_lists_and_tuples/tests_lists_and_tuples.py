@@ -1,6 +1,7 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while, average_list_values_w_for_range
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while, average_list_values_w_for_range, \
+    list_sum_of_squares_w_for
 
 class Test_Config(unittest.TestCase):
 
@@ -80,5 +81,10 @@ class Test_Config(unittest.TestCase):
         nums = [2, 4, 6, 8, 10]
         average = average_list_values_w_for_range(nums)
         self.assertEqual(average, 6.0)
-    
+
+    def test_list_sum_of_squares_w_for(self):
+        nums = [2, 4, 6 ]
+        sum_of_squares = list_sum_of_squares_w_for(nums)
+        self.assertEqual(sum_of_squares, 56)  # 2^2 + 4^2 + 6^2 = 56
+
 

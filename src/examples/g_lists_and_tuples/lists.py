@@ -74,3 +74,11 @@ def average_list_values_w_for_range(my_list):
     average = total / len(my_list)
     
     return average
+
+def list_sum_of_squares_w_for(my_list):
+    sum_of_squares = 0
+
+    for num in my_list:
+        sum_of_squares += num ** 2
+
+    return sum_of_squares
