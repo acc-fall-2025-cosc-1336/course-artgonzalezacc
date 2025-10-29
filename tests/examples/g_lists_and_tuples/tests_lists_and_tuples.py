@@ -40,3 +40,23 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(my_list[0], expected_list[0])  # the first element should be updated to 10
         self.assertEqual(my_list, expected_list)  # the entire list should match the expected list
 
+    def test_search_in_list(self):
+        nums = [5, 10, 15, 20, 25]
+        target = 15
+        found = False
+
+        if target in nums:
+            found = True
+
+        self.assertTrue(found)
+
+    def test_search_not_in_list(self):
+        nums = [5, 10, 15, 20, 25]
+        target = 30
+        not_in_list = True
+
+        if target not in nums:
+            not_in_list = False
+
+        self.assertFalse(not_in_list)
+
