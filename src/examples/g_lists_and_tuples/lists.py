@@ -54,3 +54,13 @@ def concatenate_lists():
 def list_as_parameter(my_list):
     my_list[0] = 10
     print(my_list)
+
+def total_list_values_w_while(my_list):
+    total = 0
+    i = 0
+
+    while i < len(my_list):
+        total += my_list[i]
+        i += 1
+    
+    return total

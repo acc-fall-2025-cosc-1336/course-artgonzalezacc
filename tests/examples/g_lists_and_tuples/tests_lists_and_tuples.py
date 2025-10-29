@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while
 
 class Test_Config(unittest.TestCase):
 
@@ -69,4 +69,12 @@ class Test_Config(unittest.TestCase):
         nums = [1, 2, 4]
         nums.insert(2, 3)  # insert 3 at index 2
         self.assertEqual(nums, [1, 2, 3, 4])
+
+    def test_total_list_values_w_while(self):
+        
+        nums = [1, 2, 3, 4, 5]
+        total = total_list_values_w_while(nums)
+        self.assertEqual(total, 15)
+
+    
 
