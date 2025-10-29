@@ -82,3 +82,6 @@ def list_sum_of_squares_w_for(my_list):
         sum_of_squares += num ** 2
 
     return sum_of_squares
+
+def return_list():
+    return [1, 2, 3, 4, 5]

@@ -1,7 +1,7 @@
 import unittest
 
 from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while, average_list_values_w_for_range, \
-    list_sum_of_squares_w_for
+    list_sum_of_squares_w_for, return_list
 
 class Test_Config(unittest.TestCase):
 
@@ -86,5 +86,19 @@ class Test_Config(unittest.TestCase):
         nums = [2, 4, 6 ]
         sum_of_squares = list_sum_of_squares_w_for(nums)
         self.assertEqual(sum_of_squares, 56)  # 2^2 + 4^2 + 6^2 = 56
+    
+    def test_return_list(self):
+        nums = [1, 2, 3, 4, 5]
+        returned_list = return_list()
+        self.assertEqual(returned_list, nums)
+
+    def test_return_list_is_new_instance(self):
+        returned_list = return_list()
+        another_list = return_list()
+        self.assertIsNot(returned_list, another_list)  # Ensure they are different instances
+
+        returned_list[0] = 100
+        self.assertNotEqual(returned_list, another_list)  # Ensure modifying one does not affect the other
+    
 
 
