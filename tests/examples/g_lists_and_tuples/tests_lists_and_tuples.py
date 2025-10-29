@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while, average_list_values_w_for_range
 
 class Test_Config(unittest.TestCase):
 
@@ -76,5 +76,9 @@ class Test_Config(unittest.TestCase):
         total = total_list_values_w_while(nums)
         self.assertEqual(total, 15)
 
+    def test_average_list_values_w_for_range(self):
+        nums = [2, 4, 6, 8, 10]
+        average = average_list_values_w_for_range(nums)
+        self.assertEqual(average, 6.0)
     
 

@@ -64,3 +64,13 @@ def total_list_values_w_while(my_list):
         i += 1
     
     return total
+
+def average_list_values_w_for_range(my_list):
+    total = 0
+
+    for i in range(len(my_list)):
+        total += my_list[i]
+    
+    average = total / len(my_list)
+    
+    return average
