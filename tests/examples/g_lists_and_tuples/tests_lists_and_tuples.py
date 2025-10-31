@@ -101,10 +101,16 @@ class Test_Config(unittest.TestCase):
         self.assertNotEqual(returned_list, another_list)  # Ensure modifying one does not affect the other
 
     def test_two_d_list_indexing(self):
-        my_list = [[10,20,30], [40, 50, 60]]
+        my_list = [[10,20,30], [40, 50, 60]] #hard coding
 
         self.assertEqual(10, my_list[0][0])
         self.assertEqual(50, my_list[1][1])
+
+    def test_two_d_list_row_indexing(self):
+        my_list = [[10,20,30], [40, 50, 60]]
+
+        self.assertEqual([10,20,30], my_list[0])
+        self.assertEqual([40,50,60], my_list[1])
 
     
 
