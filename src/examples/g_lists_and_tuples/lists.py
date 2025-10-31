@@ -85,3 +85,25 @@ def list_sum_of_squares_w_for(my_list):
 
 def return_list():
     return [1, 2, 3, 4, 5]
+
+def get_multiplication_table(rows, cols):
+
+    multiplication_table = []
+
+    for r in range(0, rows): #outer loop
+        row_list = []
+
+        for c in range(0, cols):
+            row_list.append((r+1)*(c+1))
+
+        multiplication_table.append(row_list)
+
+    return multiplication_table
+
+def display_multiplication_table(list):
+
+    for row in list:
+        for col_value in row:
+            print(str(col_value).rjust(3, " "), end= " ")
+
+        print(" ")
