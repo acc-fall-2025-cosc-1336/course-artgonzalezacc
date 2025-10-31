@@ -112,6 +112,32 @@ class Test_Config(unittest.TestCase):
         self.assertEqual([10,20,30], my_list[0])
         self.assertEqual([40,50,60], my_list[1])
 
+    def test_create_two_d_list_w_code(self):
+        my_list = [] #empty list
+        first_row = []
+        first_row.append(10)
+        first_row.append(20)
+        first_row.append(30) #list will be [10,20,30]
+
+        self.assertEqual([10,20,30], first_row)
+
+        my_list.append(first_row) #[[10,20,30]]
+
+        self.assertEqual([[10,20,30]], my_list)
+
+        second_row = []
+        second_row.append(40)
+        second_row.append(50)
+        second_row.append(60)
+
+        self.assertEqual([40,50,60], second_row)
+
+        my_list.append(second_row)
+
+        self.assertEqual([[10,20,30], [40, 50, 60]], my_list)
+        
+
+
     
 
 
