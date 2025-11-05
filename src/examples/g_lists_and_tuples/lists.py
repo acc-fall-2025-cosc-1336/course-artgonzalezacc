@@ -1,3 +1,5 @@
+from random import randint
+
 def test_config():
     return True
 
@@ -107,3 +109,24 @@ def display_multiplication_table(list):
             print(str(col_value).rjust(3, " "), end= " ")
 
         print(" ")
+
+def generate_lottery_numbers(num):
+    lottery_list = []
+    count = 0
+
+    while count < num:
+        lottery_list.append(randint(0, 9))
+        count += 1
+
+    return lottery_list
+
+def display_lottery_numbers(lottery_list):
+
+    print("Lottery numbers: ")
+    for i in range(0, len(lottery_list)):
+        print(lottery_list[i], end = " ")
+
+    print(" ")
+
+
+

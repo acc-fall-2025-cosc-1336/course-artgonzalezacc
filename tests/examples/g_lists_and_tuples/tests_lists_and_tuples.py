@@ -1,7 +1,7 @@
 import unittest
 
 from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while, average_list_values_w_for_range, \
-    list_sum_of_squares_w_for, return_list
+    list_sum_of_squares_w_for, return_list, generate_lottery_numbers
 
 class Test_Config(unittest.TestCase):
 
@@ -146,6 +146,13 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(96, list_element[0])
         self.assertEqual(my_tuple, expected_tuple)
         
+    def test_generate_lottery_numbers(self):
+        lottery_list = generate_lottery_numbers(7)
+
+        for number in lottery_list:
+            self.assertEqual(True, number >= 0)
+            self.assertEqual(True, number <= 9)
+
         
 
 

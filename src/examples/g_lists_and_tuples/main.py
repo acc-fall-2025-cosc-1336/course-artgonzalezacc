@@ -1,9 +1,9 @@
 #main program
-from tuples import convert_tuple_to_list, convert_list_to_tuple
+from lists import generate_lottery_numbers, display_lottery_numbers
 
 def main():
-    convert_tuple_to_list()
-    convert_list_to_tuple()
+    lottery_list = generate_lottery_numbers(7)
+    display_lottery_numbers(lottery_list)
 
 if __name__ == "__main__":
     main()
