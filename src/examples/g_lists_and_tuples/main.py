@@ -1,8 +1,8 @@
 #main program
-from tuples import loop_tuple_for
+from tuples import tuples_are_immutable
 
 def main():
-    loop_tuple_for()
+    tuples_are_immutable()
 
 if __name__ == "__main__":
     main()

@@ -23,3 +23,9 @@ def loop_tuple_for():
 
     for element in my_tuple:
         print(element)
+
+def tuples_are_immutable():#read only
+    my_tuple = (8, 5, 9, 1, 4)
+    #my_tuple[0] = 10  this statement generates a TypeError, can't modify tuple elements
+
+
