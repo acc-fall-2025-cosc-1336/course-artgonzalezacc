@@ -38,3 +38,16 @@ def reassign_tuple_to_variable():
     print(id(my_tuple[0]))
 
 
+def convert_tuple_to_list():
+    my_tuple = (8, 5, 9, 1, 4)
+    my_list = list(my_tuple)
+
+    print(my_list)
+
+def convert_list_to_tuple():
+    my_list = [8, 5, 9, 1, 4]
+    my_tuple = tuple(my_list)
+
+    print(my_tuple)
+
+
