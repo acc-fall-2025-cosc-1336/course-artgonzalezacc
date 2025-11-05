@@ -1,8 +1,8 @@
 #main program
-from tuples import create_tuple
+from tuples import loop_tuple_for
 
 def main():
-    create_tuple()
+    loop_tuple_for()
 
 if __name__ == "__main__":
     main()
