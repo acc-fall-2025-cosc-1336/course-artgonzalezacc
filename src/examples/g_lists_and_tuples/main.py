@@ -1,9 +1,9 @@
 #main program
-from lists import get_multiplication_table, display_multiplication_table
+from lists import generate_lottery_numbers, display_lottery_numbers
 
 def main():
-    table = get_multiplication_table(10,10)
-    display_multiplication_table(table)
+    lottery_list = generate_lottery_numbers(7)
+    display_lottery_numbers(lottery_list)
 
 if __name__ == "__main__":
     main()

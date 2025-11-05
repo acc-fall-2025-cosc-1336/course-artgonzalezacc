@@ -1,1 +1,53 @@
 #
+def create_tuple():
+    my_tuple = (8, 5, 9, 1, 4)
+    print(my_tuple)
+
+def loop_tuple_w_while():
+    my_tuple = (8, 5, 9, 1, 4)
+    index = 0
+
+    while(index < len(my_tuple)):
+        print(my_tuple[index])
+        index += 1 
+
+def loop_tuple_w_for_range():
+    my_tuple = (8, 5, 9, 1, 4)
+
+    for i in range(0, len(my_tuple)):
+        print(my_tuple[i])
+
+    
+def loop_tuple_for():
+    my_tuple = (8, 5, 9, 1, 4)
+
+    for element in my_tuple:
+        print(element)
+
+def tuples_are_immutable():#read only
+    my_tuple = (8, 5, 9, 1, 4)
+    #my_tuple[0] = 10  this statement generates a TypeError, can't modify tuple elements
+
+def reassign_tuple_to_variable():
+    my_tuple = (8, 5, 9, 1, 4)
+    print(my_tuple)
+    print(id(my_tuple[0]))
+
+    my_tuple = (10, 50, 4, 1, 100)
+    print(my_tuple)
+    print(id(my_tuple[0]))
+
+
+def convert_tuple_to_list():
+    my_tuple = (8, 5, 9, 1, 4)
+    my_list = list(my_tuple)
+
+    print(my_list)
+
+def convert_list_to_tuple():
+    my_list = [8, 5, 9, 1, 4]
+    my_tuple = tuple(my_list)
+
+    print(my_tuple)
+
+
