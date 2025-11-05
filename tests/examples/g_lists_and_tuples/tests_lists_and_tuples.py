@@ -135,6 +135,16 @@ class Test_Config(unittest.TestCase):
         my_list.append(second_row)
 
         self.assertEqual([[10,20,30], [40, 50, 60]], my_list)
+
+    def test_tuple_w_list_element(self):
+        my_tuple = (10, 20, [97, 98, 99])
+        expected_tuple = (10, 20, [96, 98, 99])
+        list_element = my_tuple[2]
+
+        list_element[0] = 96
+
+        self.assertEqual(96, list_element[0])
+        self.assertEqual(my_tuple, expected_tuple)
         
         
 
