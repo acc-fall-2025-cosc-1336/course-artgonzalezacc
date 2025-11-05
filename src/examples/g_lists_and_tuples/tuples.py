@@ -28,4 +28,13 @@ def tuples_are_immutable():#read only
     my_tuple = (8, 5, 9, 1, 4)
     #my_tuple[0] = 10  this statement generates a TypeError, can't modify tuple elements
 
+def reassign_tuple_to_variable():
+    my_tuple = (8, 5, 9, 1, 4)
+    print(my_tuple)
+    print(id(my_tuple[0]))
+
+    my_tuple = (10, 50, 4, 1, 100)
+    print(my_tuple)
+    print(id(my_tuple[0]))
+
 

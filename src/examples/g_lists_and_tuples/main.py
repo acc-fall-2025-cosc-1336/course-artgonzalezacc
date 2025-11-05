@@ -1,8 +1,8 @@
 #main program
-from tuples import tuples_are_immutable
+from tuples import reassign_tuple_to_variable
 
 def main():
-    tuples_are_immutable()
+    reassign_tuple_to_variable()
 
 if __name__ == "__main__":
     main()
