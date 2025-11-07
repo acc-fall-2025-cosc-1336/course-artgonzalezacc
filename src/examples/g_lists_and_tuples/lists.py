@@ -122,11 +122,62 @@ def generate_lottery_numbers(num):
 
 def display_lottery_numbers(lottery_list):
 
-    print("Lottery numbers: ")
+    print("Lottery numbers: \n")
     for i in range(0, len(lottery_list)):
         print(lottery_list[i], end = " ")
 
     print(" ")
+
+def generate_quick_pick_numbers(pick_cnt, lottery_num_cnt):
+
+    pick_list = []
+
+    for i in range(0, pick_cnt):
+        row_list = []
+        for j in range(0, lottery_num_cnt):
+            row_list.append(randint(0, 9))
+        
+        pick_list.append(row_list)
+
+    return pick_list
+
+def display_quick_pick_numbers(quick_pick_list):
+
+    print("Quick pick numbers\n")
+    for row_list in quick_pick_list:
+        for num in row_list:
+            print(num, end = " ")
+        
+        print(" ")
+
+def check_quick_pick_list_for_winner(quick_pick_list, lottery_list):
+    winner = False
+
+    for row_list in quick_pick_list:
+        if(row_list == lottery_list):
+            winner = True
+            break
+
+    return winner
+
+def count_of_numbers_matched(row_list, lottery_list):
+    cnt = 0
+    index = 0
+
+    for num in row_list:
+        if(num == lottery_list[index]):
+            cnt += 1
+        
+        index += 1
+
+    return cnt
+
+def handle_numbers_matched(numbers_matched):
+
+    if(numbers_matched >= 3):
+        print("You matched at least three numbers")
+    else:
+        print("Didn't match at least three numbers")
 
 
 

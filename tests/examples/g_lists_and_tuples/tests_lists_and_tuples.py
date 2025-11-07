@@ -1,7 +1,7 @@
 import unittest
 
 from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, total_list_values_w_while, average_list_values_w_for_range, \
-    list_sum_of_squares_w_for, return_list, generate_lottery_numbers
+    list_sum_of_squares_w_for, return_list, generate_lottery_numbers, generate_quick_pick_numbers, check_quick_pick_list_for_winner, count_of_numbers_matched
 
 class Test_Config(unittest.TestCase):
 
@@ -152,6 +152,66 @@ class Test_Config(unittest.TestCase):
         for number in lottery_list:
             self.assertEqual(True, number >= 0)
             self.assertEqual(True, number <= 9)
+
+    def test_generate_quick_pick_numbers(self):
+
+        pick_list = generate_quick_pick_numbers(5, 7)
+
+        for row_list in pick_list:
+            for num in row_list:
+                self.assertEqual(True, num >= 0)
+                self.assertEqual(True, num <= 9)
+
+    def test_check_quick_pick_list_for_no_winner(self):
+        lottery_list = [7, 1, 5, 9, 0, 6, 8]
+        quick_pick_list = []
+        quick_pick_list.append([1, 2, 3, 4, 5, 6, 7])
+        quick_pick_list.append([1, 2, 3, 7, 6, 5, 4])
+        quick_pick_list.append([0, 1, 2, 3, 4, 5, 6])
+
+        self.assertFalse(check_quick_pick_list_for_winner(quick_pick_list, lottery_list))
+
+    def test_check_quick_pick_list_for_winner(self):
+        lottery_list = [7, 1, 5, 9, 0, 6, 8]
+        quick_pick_list = []
+        quick_pick_list.append([1, 2, 3, 4, 5, 6, 7])
+        quick_pick_list.append([1, 2, 3, 7, 6, 5, 4])
+        quick_pick_list.append([0, 1, 2, 3, 4, 5, 6])
+        quick_pick_list.append([7, 1, 5, 9, 0, 6, 8])
+
+        self.assertTrue(check_quick_pick_list_for_winner(quick_pick_list, lottery_list))
+
+    def test_count_of_numbers_matched_3(self):
+        lottery_list = [7, 1, 5, 5, 0, 6, 8]
+        row_list =     [7, 2, 3, 4, 0, 6, 9]
+
+        count = count_of_numbers_matched(row_list, lottery_list)
+
+        self.assertEqual(3, count)
+
+    def test_count_of_numbers_matched_4(self):
+        lottery_list = [1, 2, 3, 4, 0, 0, 0]
+        row_list =     [1, 2, 3, 4, 9, 9, 9]
+
+        count = count_of_numbers_matched(row_list, lottery_list)
+
+        self.assertEqual(4, count)
+
+    def test_count_of_numbers_matched_5(self):
+        lottery_list = [1, 2, 3, 4, 5, 0, 0]
+        row_list =     [1, 2, 3, 4, 5, 9, 9]
+
+        count = count_of_numbers_matched(row_list, lottery_list)
+
+        self.assertEqual(5, count)
+
+    def test_count_of_numbers_matched_6(self):
+        lottery_list = [1, 2, 3, 4, 5, 6, 0]
+        row_list =     [1, 2, 3, 4, 5, 6, 9]
+
+        count = count_of_numbers_matched(row_list, lottery_list)
+
+        self.assertEqual(6, count)
 
         
 
