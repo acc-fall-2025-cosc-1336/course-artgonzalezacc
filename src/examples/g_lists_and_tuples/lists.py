@@ -160,3 +160,24 @@ def check_quick_pick_list_for_winner(quick_pick_list, lottery_list):
 
     return winner
 
+def count_of_numbers_matched(row_list, lottery_list):
+    cnt = 0
+    index = 0
+
+    for num in row_list:
+        if(num == lottery_list[index]):
+            cnt += 1
+        
+        index += 1
+
+    return cnt
+
+def handle_numbers_matched(numbers_matched):
+
+    if(numbers_matched >= 3):
+        print("You matched at least three numbers")
+    else:
+        print("Didn't match at least three numbers")
+
+
+
