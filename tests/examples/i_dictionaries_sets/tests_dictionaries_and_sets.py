@@ -82,6 +82,30 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual('Chris', phonebook['555-1111'])
 
+    def test_clear_dictionary(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+
+        phonebook.clear()
+
+        self.assertEqual(phonebook, {})
+
+    def test_dictionary_pop_key_value_pair(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        expected_value = 'Chris'
+
+        popped_value = phonebook.pop('555-1111', 'Does not exist')
+
+        self.assertEqual(popped_value, expected_value)
+        self.assertEqual(True, '555-1111' not in phonebook)
+
+    def test_dictionary_pop_key_value_pair_not_exist(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        expected_value = 'Does not exist'
+
+        popped_value = phonebook.pop('555-1112', 'Does not exist')
+
+        self.assertEqual(popped_value, expected_value)
+
 
 
 
