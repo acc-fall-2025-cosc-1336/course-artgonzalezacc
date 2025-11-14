@@ -54,5 +54,12 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(True, '555-2222' not in phonebook)
 
+    def test_count_dictionary_key_value_pairs(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        expected_count = 3
+
+        self.assertEqual(True, expected_count == len(phonebook))
+
+
 
 
