@@ -22,3 +22,16 @@ class Test_Config(unittest.TestCase):
         with self.assertRaises(KeyError):
             phonebook['555-1110']
 
+    def test_key_in_dictionary(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        key = '555-3333'
+
+        self.assertEqual(True, key in phonebook)
+
+    def test_key_not_in_dictionary(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        key = '555-0000'
+
+        self.assertEqual(True, key not in phonebook)
+
+
