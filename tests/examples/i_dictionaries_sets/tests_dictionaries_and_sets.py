@@ -60,6 +60,13 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(True, expected_count == len(phonebook))
 
+    def test_dictionary_values_as_list(self):
+        test_scores = {'Kayla':[88, 92, 100], 'Luis':[95, 74, 84], 'Sophie':[72, 88, 91], 'Ethan':[70, 75, 78]}
+
+        expected_value = [72, 88, 91]
+
+        self.assertEqual(expected_value, test_scores['Sophie'])
+
 
 
 
