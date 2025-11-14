@@ -74,6 +74,14 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(mixed_up[(3,6,9)], expected_value)
 
+    def test_create_empty_dictionary_add_values(self):
+        phonebook = {} # phonebook = dict()
+        phonebook['555-1111'] = 'Chris'
+        phonebook['555-2222'] = 'Katie'
+        phonebook['555-3333'] = 'Joanne'
+
+        self.assertEqual('Chris', phonebook['555-1111'])
+
 
 
 
