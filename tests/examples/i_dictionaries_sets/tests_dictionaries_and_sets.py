@@ -67,6 +67,13 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(expected_value, test_scores['Sophie'])
 
+    def test_dictionary_values_dif_data_types(self):
+        mixed_up = {'abc':1, 999:'yada yada', (3, 6, 9):[3, 6, 9]}
+
+        expected_value = [3, 6, 9]
+
+        self.assertEqual(mixed_up[(3,6,9)], expected_value)
+
 
 
 
