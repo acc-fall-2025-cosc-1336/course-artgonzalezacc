@@ -15,3 +15,10 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(value, expected_value)
 
+    def test_exception_when_key_not_in_dictionary(self):
+
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        
+        with self.assertRaises(KeyError):
+            phonebook['555-1110']
+
