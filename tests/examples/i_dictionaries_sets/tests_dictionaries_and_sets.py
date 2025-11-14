@@ -34,4 +34,25 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(True, key not in phonebook)
 
+    def test_add_pair_to_dictionary(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        phonebook['555-4444'] = 'Chris'
+        expected_value = 'Chris'
+
+        self.assertEqual(phonebook['555-4444'], expected_value)
+
+    def test_update_dictionary_value(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+
+        phonebook['555-1111'] = 'Cris'
+
+        self.assertEqual(phonebook['555-1111'], 'Cris')
+
+    def test_delete_key_value_pair(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        del phonebook['555-2222']
+
+        self.assertEqual(True, '555-2222' not in phonebook)
+
+
 
