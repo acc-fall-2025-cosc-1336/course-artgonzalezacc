@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.i_dictionaries_sets.dictionaries import test_config
+from src.examples.i_dictionaries_sets.dictionaries import test_config, get_faculty_rating, get_course_average, tabulate_survey_response_results
 
 class Test_Config(unittest.TestCase):
 
@@ -119,6 +119,45 @@ class Test_Config(unittest.TestCase):
 
         popped_value = phonebook.get('555-1112', 'Does not exist')
         self.assertEqual(popped_value, expected_value)
+
+    def test_get_faculty_rating(self):
+
+        self.assertEqual('Invalid Value', get_faculty_rating(7))
+        self.assertEqual('Excellent', get_faculty_rating(5.7))
+        self.assertEqual('Very Good', get_faculty_rating(5.1))
+        self.assertEqual('Good', get_faculty_rating(4.1))
+        self.assertEqual('Needs Improvement', get_faculty_rating(3.1))
+        self.assertEqual('Unacceptable', get_faculty_rating(2.5))
+        self.assertEqual('Invalid Value', get_faculty_rating(-1))
+
+    def test_tabulate_survey_results(self):
+         survey_responses_list = []
+         survey_responses_list.append([1, '2.1', 3]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.2', 4]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.3', 3]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.4', 5]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.5', 5]) # [[1, 2.1, 2], [1, 2.2, 5]]
+
+         survey_responses_list.append([1, '2.1', 3]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.2', 4]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.3', 3]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.4', 5]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.5', 5]) # [[1, 2.1, 2], [1, 2.2, 5]]
+
+         survey_responses_list.append([1, '2.1', 3]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.2', 4]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.3', 3]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.4', 5]) # [[1, 2.1, 2], [1, 2.2, 5]]
+         survey_responses_list.append([1, '2.5', 5]) # [[1, 2.1, 2], [1, 2.2, 5]]
+
+         #survey_response_results_total = {'2.1': 9, '2.2': 12, '2.3': 9, '2.4': 15, '2.5': 15}
+         expected_survey_response_results = {'2.1': 3, '2.2': 4, '2.3':3, '2.4':5, '2.5': 5}
+
+         results = tabulate_survey_response_results(survey_responses_list)
+
+         self.assertEqual(results, expected_survey_response_results)
+
+
 
 
 
