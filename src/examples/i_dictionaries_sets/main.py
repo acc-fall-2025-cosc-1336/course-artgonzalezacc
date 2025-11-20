@@ -1,11 +1,7 @@
 #main program
-from dictionaries import loop_dictionary_w_for, loop_dictionary_w_for_items, loop_dictionary_w_values
+from dictionaries import run_menu
 
 def main():
-    loop_dictionary_w_for()
-    print('')
-    loop_dictionary_w_for_items()
-    print('')
-    loop_dictionary_w_values()
+    run_menu()
 
 main()
