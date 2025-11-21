@@ -1,5 +1,12 @@
-import devprocess
+from devprocess import add_numbers
 
-result = devprocess.add_numbers(5, 5)
+def main():
+    num1 = input("Enter first number:  ")
+    num2 = input("Enter second number: ")
 
-print(result)
+    result = add_numbers(int(num1), int(num2))
+    print("The sum is:", result)
+
+
+if __name__ == "__main__":
+    main()

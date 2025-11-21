@@ -1,2 +1,183 @@
+from random import randint
+
 def test_config():
     return True
+
+def list_indexing():
+    #index  0  1  2  3   4
+    nums = [2, 4, 6, 8, 10]
+    print(nums[2])  # display 6
+    print(nums[4])  # display 10
+
+def loop_list_w_while():
+    nums = [1, 3, 5, 7, 9]
+    index = 0
+    
+    while index < len(nums):
+        print(index, index < len(nums), len(nums), nums[index])
+        index += 1
+
+def loop_list_w_for_range():
+    nums = [2, 4, 6, 8, 10]
+
+    for index in range(len(nums)):
+        print(index, len(nums), nums[index])
+
+def loop_list_w_for():
+
+    nums = [2, 4, 6, 8, 10]
+
+    for num in nums:
+        print(num)
+
+def loop_update_element():
+    nums = [1, 2, 3, 4, 5]
+
+    print(nums)
+
+    nums[2] = 0
+
+    print(nums[2])#display updated element at index 2
+    print(nums)
+
+def list_holds_mixed_data_types():
+    generic_list = [1, "two", 3.0, True]
+    for item in generic_list:
+        print(item)
+
+def concatenate_lists():
+    list_one = [1, 2, 3]
+    list_two = [4, 5, 6]
+
+    combined_list = list_one + list_two
+
+    print(combined_list)
+
+def list_as_parameter(my_list):
+    my_list[0] = 10
+    print(my_list)
+
+def total_list_values_w_while(my_list):
+    total = 0
+    i = 0
+
+    while i < len(my_list):
+        total += my_list[i]
+        i += 1
+    
+    return total
+
+def average_list_values_w_for_range(my_list):
+    total = 0
+
+    for i in range(len(my_list)):
+        total += my_list[i]
+    
+    average = total / len(my_list)
+    
+    return average
+
+def list_sum_of_squares_w_for(my_list):
+    sum_of_squares = 0
+
+    for num in my_list:
+        sum_of_squares += num ** 2
+
+    return sum_of_squares
+
+def return_list():
+    return [1, 2, 3, 4, 5]
+
+def get_multiplication_table(rows, cols):
+
+    multiplication_table = []
+
+    for r in range(0, rows): #outer loop
+        row_list = []
+
+        for c in range(0, cols):
+            row_list.append((r+1)*(c+1))
+
+        multiplication_table.append(row_list)
+
+    return multiplication_table
+
+def display_multiplication_table(list):
+
+    for row in list:
+        for col_value in row:
+            print(str(col_value).rjust(3, " "), end= " ")
+
+        print(" ")
+
+def generate_lottery_numbers(num):
+    lottery_list = []
+    count = 0
+
+    while count < num:
+        lottery_list.append(randint(0, 9))
+        count += 1
+
+    return lottery_list
+
+def display_lottery_numbers(lottery_list):
+
+    print("Lottery numbers: \n")
+    for i in range(0, len(lottery_list)):
+        print(lottery_list[i], end = " ")
+
+    print(" ")
+
+def generate_quick_pick_numbers(pick_cnt, lottery_num_cnt):
+
+    pick_list = []
+
+    for i in range(0, pick_cnt):
+        row_list = []
+        for j in range(0, lottery_num_cnt):
+            row_list.append(randint(0, 9))
+        
+        pick_list.append(row_list)
+
+    return pick_list
+
+def display_quick_pick_numbers(quick_pick_list):
+
+    print("Quick pick numbers\n")
+    for row_list in quick_pick_list:
+        for num in row_list:
+            print(num, end = " ")
+        
+        print(" ")
+
+def check_quick_pick_list_for_winner(quick_pick_list, lottery_list):
+    winner = False
+
+    for row_list in quick_pick_list:
+        if(row_list == lottery_list):
+            winner = True
+            break
+
+    return winner
+
+def count_of_numbers_matched(row_list, lottery_list):
+    cnt = 0
+    index = 0
+
+    for num in row_list:
+        if(num == lottery_list[index]):
+            cnt += 1
+        
+        index += 1
+
+    return cnt
+
+def handle_numbers_matched(numbers_matched):
+
+    if(numbers_matched >= 3):
+        print("You matched at least three numbers")
+    else:
+        print("Didn't match at least three numbers")
+
+
+
