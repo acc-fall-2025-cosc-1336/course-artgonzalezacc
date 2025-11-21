@@ -106,3 +106,34 @@ def read_lists_of_lists_from_file(file_name):
     
     print(list_langs)
 
+prog_langs = {'1' : ['1979', 'C++', 'Bjarne'], '2': ['1991', 'Java', 'Gosling'], '3': ['1996', 'Python', 'Guido']}
+
+def write_dictionary_records(file_name):
+    
+    with open(file_name, 'w') as file:
+        for key, list_record in prog_langs.items():
+            file.write(key + '\t')
+            file.write(list_record[0] + '\t')
+            file.write(list_record[1] + '\t')
+            file.write(list_record[2] + '\n')
+
+def read_dictionary_records(file_name):
+
+    prog_langs = {}
+
+    with open(file_name, 'r') as file:
+        for line in file:
+            record =  line.split('\t')
+            record[2] = record[2].rstrip('\n')
+
+            key = record[0]
+            year = record[1]
+            lang = record[2]
+            creator = record[3].rstrip('\n')
+
+            prog_langs[key] = [year, lang, creator]
+
+    print(prog_langs)
+
+
+
