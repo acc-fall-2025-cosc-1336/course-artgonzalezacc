@@ -1,8 +1,8 @@
 #main program
-from files import read_from_file_one_line_at_a_time
+from files import read_from_file_w_while_loop
 
 def main():
     file_name = 'philosophers.txt'
-    read_from_file_one_line_at_a_time(file_name)
+    read_from_file_w_while_loop(file_name)
 
 main()

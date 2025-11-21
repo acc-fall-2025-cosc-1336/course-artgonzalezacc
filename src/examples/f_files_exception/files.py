@@ -31,3 +31,15 @@ def read_from_file_one_line_at_a_time(file_name):
     print(line1)
     print(line2)
     print(line3)
+
+def read_from_file_w_while_loop(file_name):
+
+    file = open(file_name, 'r')
+
+    line = file.readline().rstrip('\n')
+
+    while line != '':
+        print(line)
+        line = file.readline().rstrip('\n')
+
+    file.close()
