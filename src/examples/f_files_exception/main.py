@@ -1,8 +1,9 @@
 #main program
-from files import read_from_file_w_while_loop
+from files import write_employee_records, read_employee_records
 
 def main():
-    file_name = 'philosophers.txt'
-    read_from_file_w_while_loop(file_name)
+    file_name = 'employees.txt'
+    #write_employee_records(file_name)
+    read_employee_records(file_name)
 
 main()

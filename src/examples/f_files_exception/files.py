@@ -43,3 +43,35 @@ def read_from_file_w_while_loop(file_name):
         line = file.readline().rstrip('\n')
 
     file.close()
+
+def write_employee_records(file_name):
+
+    file = open(file_name, 'w')
+
+    choice = '1'
+
+    while choice == '1':
+
+        id = input('Enter id: ')
+        name = input('Enter name: ')
+        dept = input('Enter dept: ')
+
+        file.write(id + '\t')
+        file.write(name + '\t')
+        file.write(dept + '\n')
+
+        choice = input('Enter 1 to continue...')
+
+def read_employee_records(file_name):
+
+    file = open(file_name, 'r')
+
+    for employee in file:
+        record = employee.split('\t') #creates a list ['1', 'C++', 'Programming]
+        id = record[0]
+        name = record[1]
+        dept = record[2]
+
+        print(id, name, dept)
+
+    file.close()
