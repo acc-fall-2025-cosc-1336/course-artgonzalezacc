@@ -1,6 +1,7 @@
 import unittest
 
-from src.examples.i_dictionaries_sets.dictionaries import test_config, get_faculty_rating, get_course_average, tabulate_survey_response_results
+from src.examples.i_dictionaries_sets.dictionaries import test_config, get_faculty_rating, get_course_average, tabulate_survey_response_results, \
+    get_course_average
 
 class Test_Config(unittest.TestCase):
 
@@ -156,6 +157,16 @@ class Test_Config(unittest.TestCase):
          results = tabulate_survey_response_results(survey_responses_list)
 
          self.assertEqual(results, expected_survey_response_results)
+
+    def test_get_course_average(self):
+        survey_response_result = {'2.1': 3, '2.2': 4, '2.3':3, '2.4':5, '2.5': 5}
+
+        course_average = get_course_average(survey_response_result)
+        expected_course_average = 4
+
+        self.assertEqual(course_average, expected_course_average)
+
+
 
 
 

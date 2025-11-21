@@ -65,9 +65,9 @@ def handle_menu_option(option):
     if(option == 1):
         display_survey_questions()
     elif(option == 2):
-        tabulate_survey_response_results()
+        survey_response_result = tabulate_survey_response_results(survey_responses_list)
 
-        average = get_course_average()
+        average = get_course_average(survey_response_result)
 
         print('Course average: ', average)
 
@@ -103,10 +103,10 @@ def tabulate_survey_response_results(survey_responses_list):
     cnt = 0
     survey_response_results_total = {'2.1': 0, '2.2': 0, '2.3': 0, '2.4': 0, '2.5': 0}
     survey_response_results = {} # {'2.1': 4, '2.2': 3, '2.3':5, '2.4':2, '2.5': 3}
+                                
 
     for response in survey_responses_list: #[1, '2.1', 4]
         survey_response_results_total[response[1]] += response[2]
-        #print(survey_response_results_total)
         if '2.5' == response[1]:
             cnt += 1
 
@@ -116,9 +116,17 @@ def tabulate_survey_response_results(survey_responses_list):
 
     return survey_response_results
 
-def get_course_average(survey_responses_list):
+def get_course_average(survey_response_result):
 
-    return ''
+    total_average = 0
+    total = 0
+
+    for key in survey_response_result:
+        total += survey_response_result[key]
+
+    total_average = total / len(survey_response_result)
+
+    return total_average
 
 def get_faculty_rating(ratio):
     
