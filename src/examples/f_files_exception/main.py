@@ -1,9 +1,8 @@
 #main program
-from files import write_to_file, read_from_file
+from files import read_from_file_one_line_at_a_time
 
 def main():
     file_name = 'philosophers.txt'
-    #write_to_file(file_name)
-    read_from_file(file_name)
+    read_from_file_one_line_at_a_time(file_name)
 
 main()
