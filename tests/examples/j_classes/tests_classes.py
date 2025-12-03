@@ -36,3 +36,30 @@ class Test_Config(unittest.TestCase):
 
         account2.deposit(600)
         self.assertEqual(1200, account2.get_balance())
+
+    def test_withdraw_w_positive_amount(self):
+        account = BankAccount(500)
+
+        account.withdraw(100)
+
+        self.assertEqual(400, account.get_balance())
+
+    def test_withdraw_w_negative_amount(self):
+        account = BankAccount(500)
+
+        account.withdraw(-100)
+
+        self.assertEqual(500, account.get_balance())
+
+    def test_withdraw_w_two_objects(self):
+        account1 = BankAccount(1000)
+        account2 = BankAccount(2000)
+        
+        self.assertEqual(1000, account1.get_balance())
+        self.assertEqual(2000, account2.get_balance())
+
+        account1.withdraw(100)
+        self.assertEqual(900, account1.get_balance())
+
+        account2.withdraw(100)
+        self.assertEqual(1900, account2.get_balance())

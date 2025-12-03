@@ -12,5 +12,10 @@ class BankAccount:
 
         if(amt > 0):
             self.__balance += amt
+
+    def withdraw(self, amt):
+        if(amt > 0 and self.__balance >= amt):
+            self.__balance -= amt
+
             
         
